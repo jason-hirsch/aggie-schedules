@@ -1,0 +1,38 @@
+<html>
+<title>HTML Schedule Maker by Bob Hanson</title>
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-win8.css">
+<head>
+  <script type="text/javascript" src=mysched.js></script>
+</head>
+<body onload=loadinfo() class="w3-win8-crimson">
+<h3>HTML Schedule Maker</h3>
+<form name=frm>
+<table>
+<tr><td>start time<td><input type=text name=StartTime value="8:00 AM" size=8>
+<td valign=top rowspan=6>
+Title: <input name=title type=text value="My schedule" size=30>
+<pre>
+<a href="javascript:alert('For example, MWF or MTWThF or TTh')">DAYS</a> <a href="javascript:alert('For example, 9-10 or 2:30-4:30 PM')">FROM-TO</a> <a href="javascript:alert('Only the first word will be displayed on the schedule, although all will be indicated on the key, if you choose to include one. \nUse an underscore (_) between words if more than one word is to be displayed.')">INFORMATION</a>
+<textarea rows=12 cols=40 name=mytimes></textarea>
+</pre>
+<td rowspan=6 valign=center>
+
+<br><a href=javascript:extractTimes() title="take any data and extract day/time information">Extract Times</a>
+<br><a href=javascript:dodisplay(true)>Display</a>
+<br><a href=javascript:doshowhtml(true)>Show HTML</a>
+<br><a href=javascript:dosave()>Save</a> / <a href=javascript:showcookie()>Show</a> / <a href=javascript:setcookie(-1)>Delete</a> Cookie
+<br><a href="javascript:void(document.frm.mytimes.value='');document.frm.mytimes.focus()">Clear</a>
+<tr><td>end time<td><input type=text name=EndTime value="9:00 PM" size=8>
+<tr><td>time slots<td><input type=text name=SlotWidth value="30" size=5> min
+<tr><td>days<td><input type=text name=Days value="M-F" size=12>
+<tr><td valign=top>display
+<td valign=top><input type=checkbox name=grouptimes value=1>group empty slots
+<br><input type=checkbox name=includekey value=1>include key
+<br><input type=checkbox name=includetime value=1 checked=true>include times
+
+</table>
+To create a schedule, indicate a title and add information such as "MWF 9-10 Organic_Chemistry (Sc378)" (one item per line). Then click on "Display" and save the file as the name of the page you want to put on the server.
+<p>
+</form>
+</body>
+</html>

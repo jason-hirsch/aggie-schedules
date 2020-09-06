@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Profile</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-win8.css">
+</head>
+<style>
+h1 {font-size: 64px;}
+h2 {font-size: 53px;}
+h3 {font-size: 36px;}
+</style>
+<body>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-border-right" style="width:15%" id="mySidebar">
+  <h2 class="w3-bar-item">Groups</h2>
+  <a href="#" class="w3-bar-item w3-button w3-border">Group 1</a>
+  <a href="#" class="w3-bar-item w3-button w3-border">Group 2</a>
+  <a href="#" class="w3-bar-item w3-button w3-border">Group 3</a>
+</div>
+<!-- the button -->
+<div class="w3-win8-crimson">
+  <div class="w3-container">
+    <h1><center>My Profile</center></h1>
+  </div>
+  <div class="w3-dropdown-hover w3-right w3-display-topright w3-margin-top w3-margin-right">
+      <button class="w3-circle w3-light-gray w3-text-red">Account</button>
+      <div class="w3-dropdown-content w3-bar-block w3-border">
+        <a href="aggie_schedules.html" class="w3-bar-iten w3-button">Home</a>
+        <a href="schedule_profile.html" class="w3-bar-item w3-button">Profile</a>
+        <a href="index.html" class="w3-bar-item w3-button">Logout</a>
+      </div>
+    </div>
+</div>
+
+<h3><center>username:</center></h3>
+<a href="Schedule_Maker_Attempt1.html" class="w3-button w3-win8-crimson w3-padding-large" style="margin-left:550px"><center>Add a Schedule!</center></a>
+
+<div class="w3-dropdown-click">
+  <button onclick="myFunction()" class="w3-button w3-win8-crimson w3-padding-large"><center>Add a Group!</center></button>
+  <div id="add_group" class="w3-dropdown-content w3-bar-block w3-border">
+    <a href="#" class="w3-bar-item w3-button w3-border">Create a new group.</a>
+    <p><center>Join a group.</center></p>
+    <form class="w3-container s3-border-bottom">
+      <input class="w3-input" type="text">
+    </form>
+  </div>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("add_group");
+  if (x.className.indexOf("w3-show") == -1) { 
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
